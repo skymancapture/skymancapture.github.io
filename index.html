@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Your Name | Cinematic Portfolio</title>
+  <title>Akash Menon | Cinematic Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
@@ -11,42 +12,75 @@
       background: #000;
       color: #fff;
     }
+
     header {
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       background: radial-gradient(circle at top, #111, #000);
+      padding: 60px 10%;
     }
+
+    .hero {
+      max-width: 900px;
+    }
+
+    .hero img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 30px;
+      border: 2px solid #222;
+    }
+
     h1 {
       font-size: 3rem;
       letter-spacing: 2px;
+      margin-bottom: 10px;
     }
-    p {
-      opacity: 0.8;
-      margin-top: 10px;
+
+    .tagline {
+      opacity: 0.85;
+      margin-bottom: 30px;
     }
+
     section {
       padding: 80px 10%;
     }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .about-text {
+      max-width: 900px;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
+      margin-top: 40px;
     }
+
     .card {
       background: #111;
-      padding: 40px;
-      text-align: center;
+      padding: 30px;
       border-radius: 10px;
     }
+
     footer {
       padding: 40px;
       text-align: center;
       opacity: 0.6;
       font-size: 14px;
     }
+
     a {
       color: #fff;
       text-decoration: none;
@@ -56,39 +90,58 @@
 
 <body>
 
+<!-- HERO / ABOUT -->
 <header>
-  <div>
+  <div class="hero">
+    <img src="profile.jpg" alt="Akash Menon">
+
     <h1>Cinematic Films • Photography • FPV</h1>
-    <p>Story-driven visuals from ground to sky</p>
+    <p class="tagline">Story-driven visuals from ground to sky</p>
+
+    <p class="about-text">
+      I’m Akash Menon, a visual storyteller with over <strong>10 years of experience</strong>
+      in the photography and filmmaking industry.
+      <br><br>
+      My journey started with photography and evolved into full-scale cinematic filmmaking
+      and high-speed FPV drone storytelling. I focus on emotion, motion, and clean visual
+      aesthetics — creating content that feels immersive, cinematic, and intentional.
+    </p>
   </div>
 </header>
 
+<!-- SERVICES -->
 <section>
-  <h2>My Work</h2>
+  <h2>What I Do</h2>
+
   <div class="grid">
-    <div class="card">Photography</div>
-    <div class="card">Cinematic Films</div>
-    <div class="card">FPV Drone</div>
+    <div class="card">
+      <h3>Photography</h3>
+      <p>
+        Model photography, travel photography, car photography, portraits,
+        events, and creative visual storytelling with a strong cinematic style.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Cinematic Films</h3>
+      <p>
+        Cinematic weddings, real estate films, car cinematics, commercials,
+        and branded visual content with professional color grading and sound design.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>FPV Drone</h3>
+      <p>
+        High-speed FPV drone sequences for real estate, cars, events, and
+        creative productions — delivering dynamic perspectives impossible with standard drones.
+      </p>
+    </div>
   </div>
 </section>
 
-<section>
-  <h2>About</h2>
-  <p>
-    I create cinematic visuals focused on emotion, motion, and storytelling —
-    from still frames to immersive FPV sequences.
-  </p>
-</section>
-
+<!-- CONTACT -->
 <section>
   <h2>Contact</h2>
-  <p>Email: your@email.com</p>
-  <p>Instagram: @yourhandle</p>
-</section>
-
-<footer>
-  © 2026 Your Name
-</footer>
-
-</body>
-</html>
+  <p>Email: <a href="mailto:skymancapture@gmail.com">skymancapture@gmail.com</a></p>
+  <p>Instagram: <a href="https://instagram.com/marksmancapture" target="_blank">@marksmancapt_
