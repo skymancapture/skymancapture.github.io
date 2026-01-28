@@ -13,6 +13,7 @@
       color: #fff;
     }
 
+    /* HERO */
     header {
       min-height: 100vh;
       display: flex;
@@ -20,128 +21,241 @@
       justify-content: center;
       text-align: center;
       background: radial-gradient(circle at top, #111, #000);
-      padding: 60px 10%;
+      padding: 70px 10%;
+      animation: fadeUp 1s ease forwards;
     }
 
     .hero {
-      max-width: 900px;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     .hero img {
-      width: 160px;
-      height: 160px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 30px;
-      border: 2px solid #222;
+      margin: 0 auto 28px auto;
+      display: block;
+      border: 2px solid rgba(255,255,255,0.15);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
     }
 
     h1 {
       font-size: 3rem;
       letter-spacing: 2px;
-      margin-bottom: 10px;
+      margin: 0 0 12px 0;
     }
 
     .tagline {
       opacity: 0.85;
-      margin-bottom: 30px;
-    }
-
-    section {
-      padding: 80px 10%;
-    }
-
-    h2 {
-      margin-bottom: 20px;
+      margin: 0 0 30px 0;
+      font-size: 1rem;
     }
 
     .about-text {
-      max-width: 900px;
-      line-height: 1.6;
-      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-size: 1.05rem;
+      opacity: 0.85;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+    /* CTA Buttons */
+    .cta {
       margin-top: 40px;
     }
 
-    .card {
-      background: #111;
-      padding: 30px;
-      border-radius: 10px;
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      border-radius: 999px;
+      transition: transform 0.25s ease, opacity 0.25s ease;
     }
 
-    footer {
-      padding: 40px;
-      text-align: center;
-      opacity: 0.6;
-      font-size: 14px;
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .btn-outline {
+      border: 1px solid #fff;
+      margin-right: 12px;
+      color: #fff;
+    }
+
+    .btn-solid {
+      background: #fff;
+      color: #000;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 90px 10%;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    h2 {
+      margin: 0 0 20px 0;
+      font-size: 2rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* WORK GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 35px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #111, #0a0a0a);
+      padding: 36px;
+      border-radius: 16px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    }
+
+    .card h3 {
+      margin: 0 0 12px 0;
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      margin: 0;
+      line-height: 1.6;
+      opacity: 0.85;
+      font-size: 0.98rem;
+    }
+
+    /* CONTACT */
+    .contact p {
+      margin: 10px 0;
+      opacity: 0.9;
     }
 
     a {
       color: #fff;
       text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.25);
+      padding-bottom: 2px;
+    }
+
+    a:hover {
+      border-bottom: 1px solid rgba(255,255,255,0.7);
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 45px 10%;
+      text-align: center;
+      opacity: 0.6;
+      font-size: 14px;
+    }
+
+    /* ANIMATION */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      .hero img {
+        width: 160px;
+        height: 160px;
+      }
+      section {
+        padding: 70px 8%;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<!-- HERO / ABOUT -->
-<header>
-  <div class="hero">
-    <img src="profile.jpg" alt="Akash Menon">
+  <!-- HERO / ABOUT -->
+  <header>
+    <div class="hero">
+      <img src="profile.jpg" alt="Akash Menon">
 
-    <h1>Cinematic Films • Photography • FPV</h1>
-    <p class="tagline">Story-driven visuals from ground to sky</p>
+      <h1>Cinematic Films • Photography • FPV</h1>
+      <p class="tagline">Story-driven visuals from ground to sky</p>
 
-    <p class="about-text">
-      I am Akash Menon, a visual storyteller with over <strong>10 years of experience</strong>
-      in the photography and filmmaking industry.
-      <br><br>
-      My journey started with photography and evolved into full-scale cinematic filmmaking
-      and high-speed FPV drone storytelling. I focus on emotion, motion, and clean visual
-      aesthetics, creating content that feels immersive, cinematic, and intentional.
-    </p>
-  </div>
-</header>
-
-<!-- SERVICES -->
-<section>
-  <h2>What I Do</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Photography</h3>
-      <p>
-        Model photography, travel photography, car photography, portraits,
-        events, and creative visual storytelling with a strong cinematic style.
+      <p class="about-text">
+        I’m Akash Menon, a visual storyteller with over <strong>10 years of experience</strong> in photography,
+        cinematic filmmaking, and FPV drone production.
+        <br><br>
+        My journey started with photography and evolved into full-scale cinematic filmmaking and high-speed FPV
+        drone storytelling. I focus on emotion, motion, and clean visual aesthetics — creating content that feels
+        immersive, cinematic, and intentional.
       </p>
-    </div>
 
-    <div class="card">
-      <h3>Cinematic Films</h3>
-      <p>
-        Cinematic weddings, Real estate films, Car cinematics, Commercials,
-        and Branded visual content with professional color grading and sound design.
-      </p>
+      <div class="cta">
+        <a class="btn btn-outline" href="#contact">CONTACT</a>
+        <a class="btn btn-solid" href="https://instagram.com/marksmancapture" target="_blank">VIEW WORK</a>
+      </div>
     </div>
+  </header>
 
-    <div class="card">
-      <h3>FPV Drone</h3>
-      <p>
-        High-speed FPV drone sequences for real estate, cars, events, and
-        creative productions, delivering dynamic perspectives impossible with standard drones.
-      </p>
+  <!-- SERVICES -->
+  <section>
+    <h2>What I Do</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Photography</h3>
+        <p>
+          Model photography, travel photography, car photography, portraits, events, and creative visual storytelling
+          with a strong cinematic style.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Cinematic Films</h3>
+        <p>
+          Cinematic weddings, real estate films, car cinematics, commercials, and branded visual content with
+          professional color grading and sound design.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>FPV Drone</h3>
+        <p>
+          High-speed FPV drone sequences for real estate, cars, events, and creative productions — delivering dynamic
+          perspectives impossible with standard drones.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section>
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:skymancapture@gmail.com">skymancapture@gmail.com</a></p>
-  <p>Instagram: <a href="https://instagram.com/marksmancapture" target="_blank">@marksmancapture
+  <!-- CONTACT -->
+  <section class="contact">
+    <h2 id="contact">Contact</h2>
+    <p>Email: <a href="mailto:skymancapture@gmail.com">skymancapture@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/marksmancapture" target="_blank">@marksmancapture</a></p>
+  </section>
+
+  <footer>
+    © 2026 Akash Menon
+  </footer>
+
+</body>
+</html>
